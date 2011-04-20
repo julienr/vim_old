@@ -68,6 +68,9 @@ set foldlevel=1         "this is just what i use
 "GLSL syntax
 au BufNewFile,BufRead *.frag, *.vert, *.fp, *.vp, *.glsl setf glsl
 
+" highlight trailing whitespaces
+let c_space_errors=1
+
 "-----------------------------------------------------------------------------------------
 "   Key bidings
 "-----------------------------------------------------------------------------------------
@@ -155,4 +158,9 @@ nmap ,s :call SwitchSourceHeader()<CR>
 "set t_Co=256
 "set t_Co=88
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
+
+" highlight column 80
+set colorcolumn=81
+highlight colorcolumn ctermbg=darkgrey guibg=darkgrey
+
 
