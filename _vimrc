@@ -32,6 +32,7 @@ set more						" Use more instead of flooding screen
 set tabstop=2
 set expandtab
 set sw=2
+" backslash m/M/l
 map \M <Esc>:set noexpandtab tabstop=8 shiftwidth=8<CR>
 map \m <Esc>:set expandtab tabstop=2 shiftwidth=2<CR>
 map \l <Esc>:set expandtab tabstop=4 shiftwidth=4<CR>
@@ -67,6 +68,13 @@ set foldlevel=1         "this is just what i use
 
 "GLSL syntax
 au BufNewFile,BufRead *.frag, *.vert, *.fp, *.vp, *.glsl setf glsl
+
+" buffer next/prev
+map <C-n> :bn<CR>
+map <C-p> :bp<CR>
+
+" jptemplate
+let g:jpTemplateKey='<C-A>'
 
 " highlight trailing whitespaces
 let c_space_errors=1
@@ -163,4 +171,8 @@ let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 set colorcolumn=81
 highlight colorcolumn ctermbg=darkgrey guibg=darkgrey
 
+" % Will match html tags
+let loaded_matchit=1
 
+" load _vimrc from current directory
+" set exrc
