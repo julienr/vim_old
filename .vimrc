@@ -156,6 +156,12 @@ endfunction
 
 nmap ,s :call SwitchSourceHeader()<CR>
 
+" map :cn and :cp to simply cn and cp to easily browse through errors
+map cn <esc>:cn<cr>
+map cp <esc>:cp<cr>
+
+" map F5 to :make and make it go back to the main window
+map <F5> :make<cr><c-w><up>
 
 " CS Approx for terminal better colorscheme support
 " see : http://vim.wikia.com/wiki/Using_GUI_color_settings_in_a_terminal
