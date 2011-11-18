@@ -117,6 +117,7 @@ ca hexedit %!xxd
 "endif
 colorscheme fruidle_custom
 "colorscheme desert
+
 "colorscheme default
 "colorscheme sienna
 
