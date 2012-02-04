@@ -180,5 +180,16 @@ highlight colorcolumn ctermbg=darkgrey guibg=darkgrey
 " % Will match html tags
 let loaded_matchit=1
 
-" load _vimrc from current directory
-" set exrc
+" Don't look through included files when doing auto-completion
+set complete-=i
+
+" Tags
+set tags+=~/.vim/tags/cpp
+set tags+=~/.vim/tags/opencv
+set tags+=~/.vim/tags/libmv
+
+" localvimrc plugin config
+let g:localvimrc_ask=0
+let g:localvimrc_count=1
+let g:localvimrc_sandbox=0
+
