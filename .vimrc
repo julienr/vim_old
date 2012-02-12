@@ -181,10 +181,16 @@ highlight colorcolumn ctermbg=darkgrey guibg=darkgrey
 " % Will match html tags
 "let loaded_matchit=1
 
-" load _vimrc from current directory
-" set exrc
-" FIXME: Loading pathogen makes filetype detection malfunction (detects
-" c++/python as 'conf')
-"call pathogen#infect()
+" Don't look through included files when doing auto-completion
+set complete-=i
 
-"au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
+" Tags
+set tags+=~/.vim/tags/cpp
+set tags+=~/.vim/tags/opencv
+set tags+=~/.vim/tags/libmv
+
+" localvimrc plugin config
+let g:localvimrc_ask=0
+let g:localvimrc_count=1
+let g:localvimrc_sandbox=0
+
