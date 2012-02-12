@@ -179,7 +179,12 @@ set colorcolumn=81
 highlight colorcolumn ctermbg=darkgrey guibg=darkgrey
 
 " % Will match html tags
-let loaded_matchit=1
+"let loaded_matchit=1
 
 " load _vimrc from current directory
 " set exrc
+" FIXME: Loading pathogen makes filetype detection malfunction (detects
+" c++/python as 'conf')
+"call pathogen#infect()
+
+au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
