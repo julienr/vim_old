@@ -187,4 +187,4 @@ highlight colorcolumn ctermbg=darkgrey guibg=darkgrey
 " c++/python as 'conf')
 "call pathogen#infect()
 
-au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
+"au BufWritePost *.coffee silent CoffeeMake! -b | cwindow | redraw!
